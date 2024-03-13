@@ -78,4 +78,18 @@ return [
 
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Reverb Prefix
+    |--------------------------------------------------------------------------
+    |
+    | Here you may define prefix to connect with sockets in a sub directory.
+    | Is util when you have a sub directory in your domain and you want to
+    | connect with sockets in that sub directory.
+    |
+    */
+
+
+    'prefix' => null,
+
 ];

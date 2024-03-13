@@ -90,7 +90,7 @@ class Factory
     {
         $routes = new RouteCollection;
 
-        $routes->add('sockets', Route::get('/app/{appKey}', new PusherController(app(PusherServer::class), app(ApplicationProvider::class))));
+        $routes->add('sockets', Route::get(config('reverb.prefix') . '/app/{appKey}', new PusherController(app(PusherServer::class), app(ApplicationProvider::class))));
         $routes->add('events', Route::post('/apps/{appId}/events', new EventsController));
         $routes->add('events_batch', Route::post('/apps/{appId}/batch_events', new EventsBatchController));
         $routes->add('connections', Route::get('/apps/{appId}/connections', new ConnectionsController));
